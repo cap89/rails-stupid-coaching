@@ -1,0 +1,63 @@
+<style>/* General styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
+  }
+
+  /* Styling for the dialogue */
+  .dialogue {
+    width: 50%;
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .question, .answer {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+  }
+
+  .question {
+    background-color: #e7f5ff;
+    border-left: 3px solid #2196F3;
+  }
+
+  .answer {
+    background-color: #fffde7;
+    border-left: 3px solid #FFEB3B;
+  }
+
+  .attribution {
+    font-style: italic;
+    text-align: right;
+    color: #777;
+  }
+</style>
+
+
+<div class="dialogue">
+  <!-- Question -->
+  <div class="question">
+    <%= @question %>
+    <p class="attribution">- You</p>
+  </div>
+
+  <!-- Coach's Answer -->
+  <div class="answer">
+    <%= @answer %>
+    <p class="attribution">- Your coach</p>
+  </div>
+</div>
